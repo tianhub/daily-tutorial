@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="layout">
+    <div class="left">12331233</div>
+    <div class="center">13443</div>
+    <div class="right">435454</div>
+  </div>
+</body>
+</html>
+
+
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  html, body, .layout {
+    height: 100%;
+  }
+  .layout {
+    padding: 0 160px 0 120px;
+  }
+ .left {
+   margin-right: -100%;
+   width: 120px;
+   float: left;
+   position: relative;
+   left: -120px;
+   background-color: red;
+ }
+ .center {
+   float: left;
+   width: 100%;
+   background-color: blue;
+ }
+ .right {
+   margin-left: -160px;
+   position: relative;
+   width: 160px;
+   right: -160px;
+   float: left;
+   background-color: yellow;
+ }
+</style>
