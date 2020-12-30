@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div></div>
+</body>
+
+<script>
+  let message;
+  let result;
+  const obj = {
+    result: '333',
+    message: '测试',
+  };
+  let { message, result } = {...obj};
+  console.log(message);
+  console.log(result);
+</script>
+</html>

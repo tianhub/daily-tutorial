@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.20/lodash.js"></script>
+    
+</head>
+
+<body>
+  <script>
+    const temp = [{
+        "hetongbianhao": "x001",
+        "huopinmingcheng": "92#车用汽油（国VIA）",
+        "chuguan": "A105",
+        "huopinpici": "x001D0004",
+        "id": 483,
+        "kehumingcheng": "中化安元科技有相似",
+        "huopinmaoyixingzhi": "内贸",
+        "zuoyebianhao": "NTPS202008200043"
+      },
+      {
+        "hetongbianhao": "x001",
+        "huopinmingcheng": "92#车用汽油（国VIA）",
+        "chuguan": "A113",
+        "huopinpici": "x001D0004",
+        "id": 481,
+        "kehumingcheng": "中化安元科技有相似",
+        "huopinmaoyixingzhi": "内贸",
+        "zuoyebianhao": "NTPS202008200043"
+      },
+      {
+        "hetongbianhao": "x001",
+        "huopinmingcheng": "92#车用汽油（国VIA）",
+        "chuguan": "A114",
+        "huopinpici": "x001D0004",
+        "id": 482,
+        "kehumingcheng": "中化安元科技有相似",
+        "huopinmaoyixingzhi": "内贸",
+        "zuoyebianhao": "NTPS202008200043"
+      },
+      {
+        "hetongbianhao": "NTSBQ20013",
+        "huopinmingcheng": "92#车用汽油（国VIA）",
+        "chuguan": "A105",
+        "huopinpici": "NTSBQ20013D0071",
+        "id": 486,
+        "kehumingcheng": "兴化市中远航运有限公司荻垛分公司",
+        "huopinmaoyixingzhi": "内贸",
+        "zuoyebianhao": "NTPS202008200043"
+      },
+      {
+        "hetongbianhao": "NTSBQ20013",
+        "huopinmingcheng": "92#车用汽油（国VIA）",
+        "chuguan": "A113",
+        "huopinpici": "NTSBQ20013D0071",
+        "id": 484,
+        "kehumingcheng": "兴化市中远航运有限公司荻垛分公司",
+        "huopinmaoyixingzhi": "内贸",
+        "zuoyebianhao": "NTPS202008200043"
+      },
+      {
+        "hetongbianhao": "NTSBQ20013",
+        "huopinmingcheng": "92#车用汽油（国VIA）",
+        "chuguan": "A114",
+        "huopinpici": "NTSBQ20013D0071",
+        "id": 485,
+        "kehumingcheng": "兴化市中远航运有限公司荻垛分公司",
+        "huopinmaoyixingzhi": "内贸",
+        "zuoyebianhao": "NTPS202008200043"
+      },
+      {
+        "hetongbianhao": "xiaoxia01",
+        "huopinmingcheng": "纯苯",
+        "chuguan": "A111",
+        "huopinpici": "xiaoxia01D0010",
+        "id": 480,
+        "kehumingcheng": "周大福能源（中国）有限公司",
+        "huopinmaoyixingzhi": "内贸",
+        "zuoyebianhao": "NTPS202008200043"
+      },
+      {
+        "hetongbianhao": "xiaoxia01",
+        "huopinmingcheng": "纯苯",
+        "chuguan": "C101",
+        "huopinpici": "xiaoxia01D0010",
+        "id": 479,
+        "kehumingcheng": "周大福能源（中国）有限公司",
+        "huopinmaoyixingzhi": "内贸",
+        "zuoyebianhao": "NTPS202008200043"
+      }
+    ];
+    const result1 = _.uniqBy(temp, 'kehumingcheng');
+    const result2 = _.uniqBy(temp, 'huopinmingcheng');
+    const result3 = _.uniqBy(temp, 'huopinmaoyixingzhi');
+    const result4 = _.union(result1, result2, result3);
+    // const result = _.uniqWith(temp, (o, p) => {
+    //   o.kehumingcheng !== p.kehumingcheng
+    //   });
+    // console.log(result);
+    debugger;
+  </script>
+</body>
+
+</html>

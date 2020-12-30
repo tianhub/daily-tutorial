@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class=container>
+    <span class="arrow"></span>
+  </div>
+</body>
+</html>
+<script>
+  var a = {
+    temp: 1,
+    valueOf: function() {
+      return this.temp ++;
+    },
+  };
+  if(a == 1 && a == 2 && a == 3) {
+    console.log('true');
+  } else {
+    console.log('false');
+  }
+</script>
+
+<style>
+  html, body {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    width: 500px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  .arrow {
+    display: inline-block;
+    width: 1px;
+    height: 1px;
+    border-top: 12px solid #00a3af;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+  }
+</style>
