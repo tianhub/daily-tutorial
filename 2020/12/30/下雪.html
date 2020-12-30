@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>下雪</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #ADD8E6;
+    }
+  </style>
+  <script src="下雪.js"></script>
+</head>
+<body style="perspective: 500px;-webkit-perspective: 500px">
+  <div class="snow"></div>
+</body>
+</html>
+<script>
+  /*原文地址 https://juejin.cn/post/6910857740327845901*/
+  const snowList = [];
+  for (let i=0; i< 200; i++) {
+    const snow = new Snow();
+    snow.render();
+    snowList.push(snow);
+  }
+
+  function snowMove() {
+    window.requestAnimationFrame(() => {
+      snowList.forEach((o) => {
+        o.move();
+      });
+      snowMove();
+    });
+  }
+  snowMove();
+</script>
