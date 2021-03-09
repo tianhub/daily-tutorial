@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="upload">上传</div>
+</body>
+<style>
+  html, body {
+    padding: 0;
+    margin: 0;
+  }
+  .upload {
+    margin-left: 500px;
+    margin-top: 500px;
+    width: 60px;
+    height: 60px;
+    border-width: 3px;
+    border-style: dashed;
+    color: #00a3af;
+    position: relative;
+    transition: color .25s;
+    text-indent: -4rem;
+    overflow: hidden;
+  }
+  .upload:before, .upload:after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+  }
+  .upload:before {
+    width: 16px;
+    border-top: 4px solid;
+    margin: -2px 0 0 -10px;
+  }
+  .upload:after {
+    height: 16px;
+    border-left: 4px solid;
+    margin: -8px 0 0 -4px;
+  }
+  .upload:hover {
+    color: red;
+    cursor: pointer;
+  }
+</style>
+</html>

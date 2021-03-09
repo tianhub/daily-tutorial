@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="box">
+    <div class="align-right">
+      <div class="follow">
+        <img src="./center.png" alt="">
+        <img src="./center.png" alt="">
+      </div>
+    </div>
+  </div>
+</body>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  .box {
+    width: 80%;
+    background-color: #00a3af;
+    height: 100vh;
+    margin: auto;
+  }
+  .align-right {
+    text-align: right;
+    height: 0;
+    overflow: hidden;
+  }
+  .align-right:before {
+    content: "\2002";
+  }
+  .follow {
+    position: fixed;
+    bottom: 100px;
+    z-index: 1;
+    display: inline-block;
+  }
+  img {
+    display: block;
+    margin: 10px;
+  }
+</style>
+</html>
