@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+  const arrayProto = Array.prototype;
+  const arrayMethods = Object.create(arrayProto);
+  ['push', 'pop', 'shift', 'unshift', 'splice', 'sort', 'reverse'].forEach(function (method) {
+    // 缓存原始方法
+    const original = arrayProto[method];
+    Object.defineProperty(arrayMethods, method, {
+      value: function mutator (...args) {
+        console.log(this, 'this');
+        return original.apply(this, args);
+      },
+      enumerable: false,
+      writable: true,
+      configurable: true,
+    });
+  });
+  const temp= ['arr'];
+  temp.__proto__ = arrayMethods;
+  temp.push('dd');
+</script>
+</html>
